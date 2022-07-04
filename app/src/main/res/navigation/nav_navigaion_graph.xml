@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_navigaion_graph"
+    app:startDestination="@id/breakingNewsFragment2">
+
+    <fragment
+        android:id="@+id/breakingNewsFragment2"
+        android:name="com.pk.bhaukalinews.fragment.BreakingNewsFragment"
+        android:label="BreakingNewsFragment" >
+
+
+        <action
+            android:id="@+id/action_breakingNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.pk.bhaukalinews.fragment.SavedFragment"
+        android:label="SavedFragment" >
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.pk.bhaukalinews.fragment.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+        android:id="@+id/action_searchNewsFragment_to_articleFragment"
+        app:destination="@id/articleFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" /></fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.pk.bhaukalinews.fragment.ArticleFragment"
+        android:label="ArticleFragment" />
+</navigation>
